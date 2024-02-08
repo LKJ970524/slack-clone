@@ -1,70 +1,169 @@
-# Getting Started with Create React App
+<div align='center'>
+    <h1><b>Slack-clone</b></h1>
+	<img src="https://github.com/LKJ970524/slack-clone/assets/115642699/24dfad19-123a-4282-b1ae-97232380aa57" alt="mainImg.">
+    <br/>
+		<br/>
+		<h3><b>slack 클론코딩(30개 프로젝트로 배우는 프론트엔드)</b></h3>
+		<br/>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
 
-## Available Scripts
+> 🗝️ **PIXEL BEAT 배포 링크 및 테스트 계정**
 
-In the project directory, you can run:
+👉 [Slack 시작하기]()
 
-### `npm start`
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📢 **1. 소개**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+개인 공부 및 더 많은 개발 경험을 위해 slack사이트를 클론 코딩하고,
+이해가 안되는 부분은 강의를 통해 발전하고 알고 있는부분도 다시 한번 배워가는 의미로 시작하게 되었습니다.
 
-### `npm test`
+<br />
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 8️⃣ **2. 소개**
 
-### `npm run build`
+```
+안녕하세요! 소통을 우선으로하는 개발자 이규정입니다!
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<div align="center">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+|                                                                                                                                  |
+| :------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://github.com/FESP-8/final-project/assets/115642699/752d0df4-d8ee-4bc2-b2a2-6c8e24d01c23" width="120px;" alt=""/> |
+|                                             [🥔이규정](https://github.com/LKJ970524)                                             |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+</div>
 
-### `npm run eject`
+<!-- Top Button -->
+<p style='background: black; width: 32px; height: 32px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: auto;'><a href="#top" style='color: white; '>▲</a></p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ✴️ **3. 역할 분담**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img src="" alt="역할 분배" />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br />
 
-## Learn More
+## ⚙️ **4. 개발 환경 및 기술 스택**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src="https://github.com/FESP-8/PixelBeat/assets/115642699/e59e9fc3-5794-4639-ac46-6cc9ba0f703c" />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br/>
 
-### Code Splitting
+### **왜 라이브러리를 사용했을까?**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img src="https://github.com/FESP-8/PixelBeat/assets/115642699/33109be5-4996-44c8-a331-28b874483808" />
 
-### Analyzing the Bundle Size
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **컨벤션**
 
-### Making a Progressive Web App
+- 개인 프로젝트로 진행하여 컨벤션을 정하지 않았습니다. 대신 커밋 컨벤션은 학습하는 강의의 순서대로 넣을 예정입니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br/>
 
-### Advanced Configuration
+#### **커밋 컨벤션**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+ex) 1. 개발환경 설정 - redux 설치
+```
 
-### Deployment
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- Top Button -->
+<p style='background: black; width: 32px; height: 32px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: auto;'><a href="#top" style='color: white; '>▲</a></p>
 
-### `npm run build` fails to minify
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ✴️ **5. 주요 기능 소개**
+
+### 1) 홈
+
+| 시작 화면                                                                                                          | 회원가입 페이지                                                                                                     | 프로필 설정 페이지                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| <img src="" width="243"/> | <img src="" width="243" /> | <img src="" width="243" /> |
+
+|                                                   로그인 페이지                                                    |                                                    검색 페이지                                                     |
+| :----------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |
+| <img src="" width="243"/> | <img src="" width="243"/> |
+
+|                                                     검색 : 가수                                                     |                                                     검색 : 앨범                                                     |
+| :-----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
+| <img src="" width="243" /> | <img src="" width="243" /> |
+
+### 2) 영수증 추천
+
+| 음악 추천 영수증                                                                                                    | 3종류 영수증                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| <img src="" width="243" /> | <img src="" width="243" /> |
+
+### 3) 재생목록 페이지
+
+|                                                재생목록 및 음악서랍                                                |                                                    music player                                                    |
+| :----------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |
+| <img src="" width="243"/> | <img src="" width="243"/> |
+
+### 4) 프로필
+
+| 프로필 페이지                                                                                                      | 프로필 수정 페이지                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| <img src="" width="243"/> | <img src="" width="243"/> |
+
+|                                                    로그아웃 기능                                                    |
+| :-----------------------------------------------------------------------------------------------------------------: |
+| <img src="" width="243" /> |
+
+## ✴️ **6. 주요 업무 및 상세역할**
+
+###
+
+- 로그인 및 회원가입 기능
+- 채널 메뉴
+- 메시지영역(채팅 기능 emoji, 이미지 전송 기능)
+- 프로필
+- 테마 기능
+  <br/>
+
+<!-- Top Button -->
+<p style='background: black; width: 32px; height: 32px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: auto;'><a href="#top" style='color: white; '>▲</a></p>
+
+<br />
+
+## ✴️ **9. 리팩토링할 부분**(추후 수정 예정)
+
+- 리액트 헬멧 등을 사용하여 SEO 최적화
+- javascript를 typescript로 변환하기
+
+
+
+<br />
+
+## ✴️ **10. 느낀점**
+
+실력 문제와 이해도가 많이 부족하여 참여한 기능이 많이 적지만 옆에서 팀원들을 보며 많은 배움을 얻었습니다. 개인적으로는 아쉬움이 너무 큰 프로젝트였지만, 부족한 점이 어떤 것인지 알게 되었으니 더 열심히 배우고 앞으로 나아가도록 하겠습니다 8조 분들 너무 고생 많으셨습니다.
+
+<br/>
+
+## ✴️ **11. 프로젝트 사용법**
+
+- 패키지 설치
+
+```
+npm i 또는 npm install
+```
+
+- 클라이언트 실행
+
+```
+npm run start
+```
+
+<!-- Top Button -->
+<p style='background: black; width: 32px; height: 32px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: auto;'><a href="#top" style='color: white; '>▲</a></p>
+
+<br />
