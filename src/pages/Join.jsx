@@ -15,6 +15,8 @@ import "../firebase"
 import {getAuth, createUserWithEmailAndPassword, updateProfile} from "firebase/auth"
 import md5 from "md5";
 import {getDatabase, ref, set} from 'firebase/database'
+import { useDispatch } from "react-redux";
+import { setUser } from "../store/userReducer";
 
 const IsPasswordValid = (password, confirmPassword) => {
   if(password.length < 6 || confirmPassword.length < 6) {
@@ -27,11 +29,12 @@ const IsPasswordValid = (password, confirmPassword) => {
 }
 
 const Join = () => {
+  const dispatch = useDispatch()
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const handleSubmit = async(event) => {
     event.preventDefault()
-    const data = new FormData(event.currentTaget)
+    const data = new FormData(event.currentTarget)
     const name = data.get('name')
     const email = data.get('email')
     const password = data.get('password')
@@ -61,8 +64,10 @@ const Join = () => {
         name: user.displayName,
         avatar: user.photoURL
       })
+      dispatch(setUser(user))
     } catch(e) {
-
+      setError(e.message);
+      setLoading(false)
     }
   }
 
