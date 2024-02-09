@@ -58,7 +58,7 @@ const Join = () => {
       const {user} = await createUserWithEmailAndPassword(getAuth(), email, password)
       await updateProfile(user, {
         displayName: name,
-        photoURL: `https://gravatar.com/avatar/${md5(email)}?d=mp`
+        photoURL: `https://gravatar.com/avatar/${md5(email)}?d=identicon`
       })
       await set(ref(getDatabase(),'users/'+user.uid), {
         name: user.displayName,

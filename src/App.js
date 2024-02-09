@@ -20,10 +20,10 @@ function App() {
       }
     })
     return () =>unsubscribe()
-  },[dispatch])
+  }, [dispatch])
   return (
     <Routes>
-      <Route path="/" element={<Main/>} />
+      <Route path="/" element={currentUser ?<Main/> : <Navigate to="/login" /> } />
       <Route path="/join" element={currentUser ?<Navigate to="/" /> : <Join/>} />
       <Route path="/login" element={<Login/>} />
     </Routes>
