@@ -8,11 +8,69 @@ import {
   Typography,
 } from "@mui/material";
 import TagIcon from "@mui/icons-material/Tag";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { LoadingButton } from "@mui/lab";
 import { Link } from "react-router-dom";
+import "../firebase"
+import {getAuth, createUserWithEmailAndPassword, updateProfile} from "firebase/auth"
+import md5 from "md5";
+import {getDatabase, ref, set} from 'firebase/database'
+
+const IsPasswordValid = (password, confirmPassword) => {
+  if(password.length < 6 || confirmPassword.length < 6) {
+    return false
+  } else if (password !== confirmPassword) {
+    return false
+  } else {
+    return true
+  }
+}
 
 const Join = () => {
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
+  const handleSubmit = async(event) => {
+    event.preventDefault()
+    const data = new FormData(event.currentTaget)
+    const name = data.get('name')
+    const email = data.get('email')
+    const password = data.get('password')
+    const confirmPassword = data.get('confirmPassword')
+
+    if(!name || !email || !password || !confirmPassword) {
+      setError('모든 항목을 입력해주세요.')
+      return
+    }
+    if(!IsPasswordValid(password, confirmPassword)) {
+      setError('비밀번호를 확인하세요')
+      return
+    }
+
+    postUserData(name, email, password)
+  }
+
+  const postUserData = async (name, email, password) => {
+    setLoading(true)
+    try{
+      const {user} = await createUserWithEmailAndPassword(getAuth(), email, password)
+      await updateProfile(user, {
+        displayName: name,
+        photoURL: `https://gravatar.com/avatar/${md5(email)}?d=mp`
+      })
+      await set(ref(getDatabase(),'users/'+user.uid), {
+        name: user.displayName,
+        avatar: user.photoURL
+      })
+    } catch(e) {
+
+    }
+  }
+
+  useEffect(() => {
+    if(!error) return
+    setTimeout(() => {setError('')},3000)
+  },[error])
+
   return (
     <Container component="main" naxWidth="xs">
       <Box
@@ -30,7 +88,7 @@ const Join = () => {
         <Typography component="h1" variant="h5">
           회원가입
         </Typography>
-        <Box component="form" noValidate sx={{ mt: 3 }}>
+        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
@@ -69,13 +127,12 @@ const Join = () => {
               />
             </Grid>
           </Grid>
-          <Alert sx={{ mt: 3 }} severity="error">
-            에러메시지
-          </Alert>
+          {error ? <Alert sx={{ mt: 3 }} severity="error"> {error} </Alert> : null}
           <LoadingButton
             type="submit"
             fullWidth
             variant="contained"
+            loading={loading}
             color="secondary"
             sx={{ mt: 3, mb: 2 }}
           >
