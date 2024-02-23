@@ -7,7 +7,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import TagIcon from "@mui/icons-material/Tag";
 import { LoadingButton } from "@mui/lab";
 import { Link } from "react-router-dom";
@@ -17,7 +17,18 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const handleSubmit = (event) => {
+
+  const loginUser = useCallback(async (email, password) => {
+    setLoading(true);
+    try {
+      await signInWithEmailAndPassword(getAuth(), email, password);
+    } catch (e) {
+      setError(e.message);
+      setLoading(false);
+    }
+  },[]);
+
+  const handleSubmit = useCallback((event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const email = data.get("email");
@@ -28,17 +39,7 @@ function Login() {
       return;
     }
     loginUser(email, password);
-  };
-
-  const loginUser = async (email, password) => {
-    setLoading(true);
-    try {
-      await signInWithEmailAndPassword(getAuth(), email, password);
-    } catch (e) {
-      setError(e.message);
-      setLoading(false);
-    }
-  };
+  },[loginUser]);
 
   useEffect(() => {
     if (!error) return;
